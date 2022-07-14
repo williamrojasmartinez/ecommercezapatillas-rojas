@@ -25,10 +25,7 @@ const NavBar = () => {
                 </li>
               </ul>
         </nav>
-        <div className='carrito'>
-        <box-icon name='cart-download' ></box-icon>
-            <span className='item'>0</span>
-        </div>
+      
       </header> 
     </div>
   )
