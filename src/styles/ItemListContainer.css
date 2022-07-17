@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-top: 10rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.parrafo{
+    box-shadow: 0 5px 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: #b3d4e1;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+@media (max-width:599px){
+    .texto{
+        margin-top: 12rem;
+    }
+}
