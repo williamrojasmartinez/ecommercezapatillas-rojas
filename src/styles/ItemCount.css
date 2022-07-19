@@ -1,0 +1,19 @@
+.contador{
+    max-width: 30rem;
+    height: 70px;
+    font-size: 40px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+h6{
+    font-size: 15px; 
+    margin-left: 20px;
+    color: red;
+}
