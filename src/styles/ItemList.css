@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedorAdidas{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contenedorTenisAdidas{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.cardAdidas{
+    width: 21rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px 3px  #1A4D2E;
+    /*box-shadow: 0 5px 10px;*/
+}
+
+.cardAdidas:hover{
+    transform: scale(1.10);
+}
+
+.cardAdidas img{
+    width: 100%;
+}
+
+.botonAdidas{
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 10px 20px 0;
+    border: 1px solid #ccc;
+    background: rgb(61, 139, 85);
+    border-radius: 8px 8px 8px 8px;
+}
+
+.botonAdidas:hover{
+    background: #ddd;
+}
+
+Footer{
+    width: 100%;
+    margin-top: 6.4rem;
+}
+
+@media (max-width:599px) {
+.contenedorAdidas{
+    margin-top: 9rem;
+}
+}
+
+@media (max-width:358px) {
+    .cardAdidas{
+        box-shadow: none;
+    }
+    .cardAdidas img{
+        width: 90%;
+    }
+}
+
+@media (max-width:295px) {
+    .cardAdidas img{
+        width: 48%;
+    }
+}
+
+@media (max-width:224px) {
+    .cardAdidas{
+        font-size: 0.84rem;
+    }
+}
