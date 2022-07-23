@@ -4,6 +4,12 @@ import '../styles/ItemListContainer.css'
 import ItemList from './ItemList';
 
 function ItemListContainer(props) {
+
+  //FUNCIÓN PARA AGREGAR LOS PRODUCTOS AL CARRITO
+  const onAdd = (cantidad) => {
+    console.log(`Agregaste ${cantidad} al carrito`);
+  }
+
   return (
     <>
 
@@ -18,6 +24,7 @@ function ItemListContainer(props) {
       <ItemCount
        stock={5}
        initial={1}
+       onAdd={onAdd}
       />   
 
       <ItemList />   

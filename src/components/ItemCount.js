@@ -3,34 +3,32 @@ import '../styles/ItemCount.css';
 
 function ItemCount( { stock, initial, onAdd } ) {
 
-const [click, setClick] = useState(initial)
+const [count, setCount] = useState(initial)
 
-const substract = () => {
-    click != 1 ? setClick(click - initial) : setClick(initial)
+const disminuir = () => {
+  count > initial && setCount(count - 1)
 }
 
-onAdd = () => {
-  
-    setClick(click + 1)
-  
-  if (click == stock) {
-    setClick(stock)
-  }
- 
+const aumentar = () => {
+  count < stock && setCount(count + 1)
 }
 
 
   return (
+    <>
     <div className="contador">
-        <button onClick={substract}><box-icon name='down-arrow' type='solid'></box-icon></button>
+        <button onClick={disminuir}><box-icon name='down-arrow' type='solid'></box-icon></button>
       
-        <span>{click}</span>
+        <span>{count}</span>
 
-        <button onClick={onAdd}><box-icon name='up-arrow' type='solid'></box-icon></button>
+        <button onClick={aumentar}><box-icon name='up-arrow' type='solid'></box-icon></button>
       
       
       <h6>{`Solo quedan ${stock} unidades`}</h6>
+      <button onClick={() => onAdd(count)}>Agregar al Carrito</button>
     </div>
+    
+    </>
   )
 }
 
