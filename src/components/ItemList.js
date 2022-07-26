@@ -36,8 +36,9 @@ const tenisAdidas = useTenisAdidas()
         <h2>ADIDAS</h2>
 
         <section className='contenedorTenisAdidas'>
-            
+        
             {
+               
                 tenisAdidas.map(item => {
                     return (
                         <Item
@@ -48,6 +49,7 @@ const tenisAdidas = useTenisAdidas()
                         />
                     )
                 })
+        
             }
 
         </section>

@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tarjetas{
+    margin-top: 5rem;
+}
+
+.card{
+    position:static;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+
+.card:hover{
+    box-shadow: 0 0 10px 3px  #0e0532;
+}
+
+.card .imgBox{
+    position: static;
+    min-width: 48%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .imgBox img{
+    width: 85%;
+}
+
+.card .details{
+    position:static;
+    min-width: 45px;
+    background: #4ba9e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 50px;
+    color: rgb(4, 26, 96);
+    font-size: 20px;
+}
+
+
+
+@media (max-width:729px){
+    .card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 0.8fr;
+        grid-template-areas: "card"
+                             "details";
+        
+    }
+.card{
+    grid-area: card;
+}
+
+.details{
+    grid-area: details;
+}
+}
+
+@media (max-width:729px) {
+    .card .details .titulo{ 
+        padding-top: 10px;
+    }
+
+    .card .details .descripcion{ 
+        padding-top: 3rem;
+    }
+
+    .card .details .precio{ 
+        padding-top: 3rem;
+    }
+}
