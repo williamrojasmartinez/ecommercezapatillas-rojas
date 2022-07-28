@@ -34,7 +34,7 @@ const tenisNike = useTenisNike()
 
     return (
     <div className='contenedorAdidas'>
-        <h2>NIKE</h2>
+        <h2>NIKEEE</h2>
 
         <section className='contenedorTenisAdidas'>
         
