@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import Item from './Item'
-import DataAdidas from '../data/DataAdidas'
-import '../styles/ItemList.css'
+import  { Link } from "react-router-dom";
+import Cargando from "../../images/cargando.gif"
+import Item from '../itemList/Item'
+import DataAdidas from '../../data/DataAdidas'
+import '../itemList/ItemList.css'
 
-function ItemList() {
+function ItemListAdidas() {
   
     const mision = () => {
     const promesa = new Promise(resolve => {
         setTimeout(() => {
             resolve(DataAdidas)
-        }, 2000)
+        }, 500)
     })
     return promesa
   }
@@ -38,18 +40,20 @@ const tenisAdidas = useTenisAdidas()
         <section className='contenedorTenisAdidas'>
         
             {
-               
+     
                 tenisAdidas.map(item => {
                     return (
                         <Item
                             key={item.id}
                             titulo={item.titulo}
                             image={item.image}
-                            precio={item.precio}   
+                            precio={item.precio}  
+                            boton={<Link to={`/adidas/${item.id}`}><button className='boton'>Más detalles</button></Link>} 
                         />
                     )
                 })
-        
+
+                
             }
 
         </section>
@@ -57,4 +61,4 @@ const tenisAdidas = useTenisAdidas()
   )
 }
 
-export default ItemList
+export default ItemListAdidas

@@ -1,7 +1,7 @@
 import React from 'react'
-import ItemCount from '../components/ItemCount';
-import '../styles/ItemListContainer.css'
-import ItemList from './ItemList';
+import ItemCount from '../../components/itemList/ItemCount';
+import '../itemList/ItemListContainer.css'
+//import ItemListAdidas from './ItemListAdidas';
 
 function ItemListContainer(props) {
 
@@ -25,9 +25,15 @@ function ItemListContainer(props) {
        stock={5}
        initial={1}
        onAdd={onAdd}
-      />   
+      /> 
+    </div>
 
-      <ItemList />   
+
+    <div>
+    
+    
+     {/* <ItemListAdidas /> */}
+    
     </div>
 
     </>

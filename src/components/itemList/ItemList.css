@@ -5,7 +5,7 @@
 }
 
 .contenedorAdidas{
-    margin-top: 1rem;
+    margin-top: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,6 +19,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 50px;
+    top:  0rem;
 }
 
 .cardAdidas{
@@ -31,15 +32,15 @@
     /*box-shadow: 0 5px 10px;*/
 }
 
-.cardAdidas:hover{
+/*.cardAdidas:hover{
     transform: scale(1.10);
-}
+}*/
 
 .cardAdidas img{
     width: 100%;
 }
 
-.botonAdidas{
+.boton{
     font-weight: bold;
     cursor: pointer;
     padding: 5px;
@@ -49,7 +50,7 @@
     border-radius: 8px 8px 8px 8px;
 }
 
-.botonAdidas:hover{
+.boton:hover{
     background: #ddd;
 }
 
@@ -60,7 +61,7 @@ Footer{
 
 @media (max-width:599px) {
 .contenedorAdidas{
-    margin-top: 9rem;
+    margin-top: 12rem;
 }
 }
 

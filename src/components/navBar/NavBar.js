@@ -1,28 +1,29 @@
 import React from 'react';
-import logo from '../images/logo.jpg';
-import CartWidget from './CartWidget';
-import '../styles/NavBar.css';
+import logo from '../../images/logo.jpg';
+import CartWidget from '../cart/CartWidget';
+import '../../components/navBar/NavBar.css';
+import  { Link } from "react-router-dom";
 
 
 const NavBar = () => {
   return (
     <div>
         <header>
-        <a href='/#' className='logo'>
+        <Link to='/' className='logo'>
             <img src={ logo } alt="Logo de la empressa" className="Imagen Logo"/>
             <h2>Worm Sports</h2>
-        </a>
+        </Link>
         
         <nav>
             <ul className="nav justify-content-end">
                 <li>
-                  <a href='/#'>Inicio</a>
+                  <Link to='/'>Inicio</Link>
                 </li>
                 <li>
-                  <a href='/#'>Adidas</a>
+                  <Link to='/adidas'>Adidas</Link>
                 </li>
                 <li>
-                  <a href='/#'>Nike</a>
+                  <Link to='/nike'>Nike</Link>
                 </li>
               </ul>
         </nav>

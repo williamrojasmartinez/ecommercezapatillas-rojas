@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Item({ id, titulo, image, precio }) {
+function Item({ id, titulo, image, precio, boton }) {
   
     return (
       
@@ -9,7 +9,7 @@ function Item({ id, titulo, image, precio }) {
       {titulo}
       <img src={image} />
       {`$ ${precio}.00 `}
-      <button className='botonAdidas'>Más detalles</button>
+      {boton}
     </div>
     
   )

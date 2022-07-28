@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/ItemDetail.css'
+import '../../components/detail/ItemDetail.css'
 
 function ItemDetail({ titulo, image, descripcion, precio }) {
 

@@ -4,8 +4,17 @@
     box-sizing: border-box;
 }
 
+.cargando{
+   /* display: block;
+    margin: auto;*/
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 15rem;
+}
+
 .tarjetas{
-    margin-top: 5rem;
+    margin-top: 12rem;
 }
 
 .card{
