@@ -5,13 +5,14 @@ import Item from '../itemList/Item'
 import DataAdidas from '../../data/DataAdidas'
 import '../itemList/ItemList.css'
 
+
 function ItemListAdidas() {
   
     const mision = () => {
     const promesa = new Promise(resolve => {
         setTimeout(() => {
             resolve(DataAdidas)
-        }, 500)
+        }, 1000)
     })
     return promesa
   }
@@ -40,7 +41,7 @@ const tenisAdidas = useTenisAdidas()
         <section className='contenedorTenisAdidas'>
         
             {
-     
+                Cargando < tenisAdidas  ? 
                 tenisAdidas.map(item => {
                     return (
                         <Item
@@ -52,7 +53,7 @@ const tenisAdidas = useTenisAdidas()
                         />
                     )
                 })
-
+                : <img className='cargando' src={`${Cargando}`}/>
                 
             }
 

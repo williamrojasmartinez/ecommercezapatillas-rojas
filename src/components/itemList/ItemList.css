@@ -29,12 +29,7 @@
     align-items: center;
     flex-direction: column;
     box-shadow: 0 0 10px 3px  #1A4D2E;
-    /*box-shadow: 0 5px 10px;*/
 }
-
-/*.cardAdidas:hover{
-    transform: scale(1.10);
-}*/
 
 .cardAdidas img{
     width: 100%;
