@@ -24,8 +24,12 @@ const aumentar = () => {
         <button onClick={aumentar}><box-icon name='up-arrow' type='solid'></box-icon></button>
       
       
-      <h6>{`Solo quedan ${stock} unidades`}</h6>
-      <button onClick={() => onAdd(count)}>Agregar al Carrito</button>
+       <h6>{`Solo quedan ${stock} unidades`}</h6>
+       <button onClick={() => onAdd(count)}>Agregar al Carrito</button>
+
+
+       <button><box-icon type='solid' name='trash'></box-icon></button>
+
     </div>
     
     </>
