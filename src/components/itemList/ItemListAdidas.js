@@ -48,7 +48,7 @@ const tenisAdidas = useTenisAdidas()
                             key={item.id}
                             titulo={item.titulo}
                             image={item.image}
-                            precio={item.precio}  
+                            precio={item.precio} 
                             boton={<Link to={`/adidas/${item.id}`}><button className='boton'>Más detalles</button></Link>} 
                         />
                     )

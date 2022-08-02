@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import ItemCount from '../itemList/ItemCount'
 import '../../components/detail/ItemDetail.css'
 
-function ItemDetail({ titulo, image, descripcion, precio }) {
+function ItemDetail({ titulo, image, descripcion, stock, precio }) {
 
+
+  const onAdd = (cantidad) => {
+    console.log(`Agregaste ${cantidad} al carrito`);
+  }
 
   return (
     <div className='tarjetas'>
@@ -66,8 +71,14 @@ function ItemDetail({ titulo, image, descripcion, precio }) {
                     {`$ ${precio}.00 `}
                     </div>
 
+                    
+
                     <div>
-                    <button className='btn'>Agregar al Carrito</button>
+                      <ItemCount
+                      stock={stock}
+                      initial={1}
+                      onAdd={onAdd}
+                      /> 
                     </div>
                 
                 </div>

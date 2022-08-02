@@ -81,39 +81,16 @@
     font-size: 30px ;
 }
 
-.btn{
-    
-    font-size: 25px;
-    cursor: pointer;
-    padding: 10px;
-    margin: 0 10px 20px 0;
-    background: #277cb4;
-    border: 2px solid #fff;
-    border-radius: 8px 8px 8px 8px;
-    color: rgb(4, 26, 96)
-}
-
-.btn:hover{
-    background: #fff;
-}
-
-
 @media (max-width:599px){
     .tarjetas{
         margin-top: 12rem;
     }
     }
 
-
-
-
 @media (max-width:865px) {
     .card .details .precio{
         display: flex;
         flex-direction: column;
-        margin-top: 1rem;
-    }
-    .card .details .btn{
         margin-top: 1rem;
     }
     
@@ -134,11 +111,6 @@
     .card .details .precio{
         margin-top: 2rem;
     }
-    .card .details .btn{
-        margin-top: 1rem;
-        font-size: 25px;
-        padding: 10px; 
-    }
 } 
 
 
@@ -158,13 +130,5 @@
 .details{
     grid-area: details;
 }
-
-
 }
 
-@media (max-width:786px) {
-    .btn{ 
-        padding: 5px;
-        font-size: 12px;
-    }
-}

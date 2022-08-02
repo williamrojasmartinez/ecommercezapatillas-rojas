@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import  { Link } from "react-router-dom"; 
 import '../itemList/ItemCount.css';
 
 function ItemCount( { stock, initial, onAdd } ) {
@@ -17,18 +18,17 @@ const aumentar = () => {
   return (
     <>
     <div className="contador">
-        <button onClick={disminuir}><box-icon name='down-arrow' type='solid'></box-icon></button>
+        <button className="btn-disminuir" onClick={disminuir}><box-icon name='down-arrow' type='solid'></box-icon></button>
       
         <span>{count}</span>
 
-        <button onClick={aumentar}><box-icon name='up-arrow' type='solid'></box-icon></button>
+        <button className="btn-aumentar" onClick={aumentar}><box-icon name='up-arrow' type='solid'></box-icon></button>
       
-      
-       <h6>{`Solo quedan ${stock} unidades`}</h6>
-       <button onClick={() => onAdd(count)}>Agregar al Carrito</button>
-
-
-       <button><box-icon type='solid' name='trash'></box-icon></button>
+        <div className='texto-y-boton'>
+            <h6>{`Quedan ${stock} unidades`}</h6>
+            
+            <Link to='/cart'><button className='btn-agregar' onClick={() => onAdd(count)}>Agregar al Carrito</button></Link>
+        </div>
 
     </div>
     

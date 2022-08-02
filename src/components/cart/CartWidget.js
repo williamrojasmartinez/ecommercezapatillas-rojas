@@ -6,6 +6,7 @@ function CartWidget() {
     <div className='carrito'>
         <box-icon name='cart-download' ></box-icon>
         <span className='item'>0</span>
+          
     </div>
   )
 }

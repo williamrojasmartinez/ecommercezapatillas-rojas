@@ -6,6 +6,7 @@ import ItemListNike from './components/itemList/ItemListNike'
 import ItemListContainer from './components/itemList/ItemListContainer'
 import ItemDetailContainerAdidas from '../src/components/detail/ItemDetailContainerAdidas';
 import ItemDetailContainerNike from '../src/components/detail/ItemDetailContainerNike';
+import Cart from './components/cart/Cart';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -38,6 +39,11 @@ function App() {
               <Route path="/nike/:id" exact>
                <ItemDetailContainerNike />
               </Route>
+
+              <Route path="/cart" exact>
+               <Cart />
+              </Route>
+
 
             </Switch>
       </BrowserRouter>

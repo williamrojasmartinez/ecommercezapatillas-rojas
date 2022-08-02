@@ -50,6 +50,7 @@ const ItemDetailContainerAdidas = () => {
                      <ItemDetail
                         titulo={product.titulo}
                         descripcion={product.descripcion}
+                        stock={product.stock}
                         image={product.image}
                         precio={product.precio}
                      />
