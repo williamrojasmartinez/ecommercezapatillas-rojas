@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Item({ id, titulo, image, precio, boton }) {
-  
+
     return (
       
       <div className='cardAdidas'>

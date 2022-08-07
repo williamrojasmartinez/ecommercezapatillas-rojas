@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import  { Link } from "react-router-dom"; 
+import React, { useState } from 'react' 
 import '../itemList/ItemCount.css';
 
 function ItemCount( { stock, initial, onAdd } ) {
@@ -27,7 +26,7 @@ const aumentar = () => {
         <div className='texto-y-boton'>
             <h6>{`Quedan ${stock} unidades`}</h6>
             
-            <Link to='/cart'><button className='btn-agregar' onClick={() => onAdd(count)}>Agregar al Carrito</button></Link>
+            <button className='btn-agregar' onClick={() => onAdd(count)}>Agregar al Carrito</button>
         </div>
 
     </div>

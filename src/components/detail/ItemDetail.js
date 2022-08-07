@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ItemCount from '../itemList/ItemCount'
 import '../../components/detail/ItemDetail.css'
+import CartContext from '../../context/CartContext';
+
+
 
 function ItemDetail({ titulo, image, descripcion, stock, precio }) {
 
+  const { addProduct } = useContext(CartContext);
 
   const onAdd = (cantidad) => {
-    console.log(`Agregaste ${cantidad} al carrito`);
+    const tenis = {titulo, image, descripcion, stock, precio}
+    console.log(`Agregaste ${cantidad} al carrito`)
+      
+    for (let index = 0; index < cantidad; index++) {
+          addProduct(tenis)
+      
+      }
+    
   }
+
 
   return (
     <div className='tarjetas'>
@@ -31,40 +43,50 @@ function ItemDetail({ titulo, image, descripcion, stock, precio }) {
                                 
                                 <p>Tallas</p>
 
-                                  <ul>
+                                <ul>
+                                <li><input 
+                                    type="radio"
+                                    name="talla"
+                                    value="6.5"
+                                    />6.5</li>
+
                                     <li><input 
                                     type="radio"
                                     name="talla"
-                                    value="6.5" />6.5</li>
+                                    value="7"/>7</li>
+                                    
                                     <li><input 
                                     type="radio"
                                     name="talla"
-                                    value="7" />7</li>
+                                    value="7.5"/>7.5</li>
+
                                     <li><input 
                                     type="radio"
                                     name="talla"
-                                    value="7.5" />7.5</li>
+                                    value="8"/>8</li>
+
                                     <li><input 
                                     type="radio"
                                     name="talla"
-                                    value="8" />8</li>
+                                    value="8.5"/>8.5</li>
+
                                     <li><input 
                                     type="radio"
                                     name="talla"
-                                    value="8.5" />8.5</li>
+                                    value="9"/>9</li>
+
                                     <li><input 
                                     type="radio"
                                     name="talla"
-                                    value="9" />9</li>
+                                    value="9.5"/>9.5</li>
+
                                     <li><input 
                                     type="radio"
                                     name="talla"
-                                    value="9.5" />9.5</li>
-                                    <li><input 
-                                    type="radio"
-                                    name="talla"
-                                    value="10" />10</li>
-                                  </ul>
+                                    value="10"/>10</li>
+
+                                 </ul>
+                                  
                               </div>
 
                     <div className='precio'>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 import 'boxicons';
 import NavBar from './components/navBar/NavBar';
 import ItemListAdidas from './components/itemList/ItemListAdidas';
@@ -8,12 +9,14 @@ import ItemDetailContainerAdidas from '../src/components/detail/ItemDetailContai
 import ItemDetailContainerNike from '../src/components/detail/ItemDetailContainerNike';
 import Cart from './components/cart/Cart';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import CartState from './context/CartState';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-
+      <CartState>
+        <BrowserRouter>
+      
         <NavBar/>
 
             <Switch>
@@ -44,11 +47,25 @@ function App() {
                <Cart />
               </Route>
 
-
+              <Route path="*" 
+              component={NotFound}>
+              </Route>
+            
             </Switch>
-      </BrowserRouter>
+
+      
+        </BrowserRouter>
+      </CartState>
     </div>
   )
+}
+
+function NotFound() {
+  return (
+    <div>
+      <h1 className='notFound'>404 Not Found (Llegaste a una página que no existe)</h1> 
+    </div>  
+  ) 
 }
 
 export default App;
