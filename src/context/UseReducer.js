@@ -9,9 +9,8 @@ const reducer = (state, action) =>
                      const stateTemp = [...state.cart, payload]
                      return { cart: stateTemp }  
 
-                    case removeProduct: 
-                    const id = payload.id
-                    const result = state.cart.filter(tenis => tenis.id !== id);
+                    case removeProduct:
+                    const result = state.cart.filter(tenis => tenis.id !== payload);
                     return { cart: result } 
                     
                     default: return state 

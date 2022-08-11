@@ -48,6 +48,7 @@ const ItemDetailContainerAdidas = () => {
           product !== undefined ?
           <>
                      <ItemDetail
+                        id={product.id}
                         titulo={product.titulo}
                         descripcion={product.descripcion}
                         stock={product.stock}

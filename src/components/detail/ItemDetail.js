@@ -5,12 +5,12 @@ import CartContext from '../../context/CartContext';
 
 
 
-function ItemDetail({ titulo, image, descripcion, stock, precio, id }) {
+function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
 
   const { addProduct } = useContext(CartContext);
 
   const onAdd = (cantidad) => {
-    const tenis = {titulo, image, descripcion, stock, precio, id}
+    const tenis = {id, titulo, image, descripcion, stock, precio}
     console.log(`Agregaste ${cantidad} al carrito`)
       
     for (let index = 0; index < cantidad; index++) {

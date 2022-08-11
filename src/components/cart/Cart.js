@@ -27,7 +27,7 @@ function Cart() {
                 
                 <div className='titulo'>{item.titulo}</div>
                 
-                <div className='remove' onClick={ removeProduct }><box-icon  type='solid' name='trash'></box-icon></div>
+                <div className='remove' onClick={() => removeProduct(item.id) }><box-icon  type='solid' name='trash'></box-icon></div>
                 
                 <div className='precio'>{` $ ${item.precio}.00`}</div>       
             </div>
