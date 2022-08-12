@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css'
 import 'boxicons';
 import NavBar from './components/navBar/NavBar';
@@ -10,8 +10,31 @@ import ItemDetailContainerNike from '../src/components/detail/ItemDetailContaine
 import Cart from './components/cart/Cart';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import CartState from './context/CartState';
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 function App() {
+
+const [value, setValue] = useState('')
+
+  useEffect(() => {
+    const db = getFirestore();
+    const docref = doc(db, 'itemsAdidas', '17yY42rRtTLfCzIAM6wk')
+    getDoc(docref)
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        const data = {
+          id: snapshot.id,
+          ...snapshot.data()
+        }
+        console.log(data)
+        setValue(data)
+      }
+    })
+    .catch((error) => console.error(error))
+  }, [])
+
+
+
   return (
     <div className="App">
       <CartState>

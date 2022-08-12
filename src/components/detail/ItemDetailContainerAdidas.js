@@ -2,21 +2,22 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import Cargando from '../../images/cargando.gif' 
 import ItemDetail from '../detail/ItemDetail'
-import DataAdidas from '../../data/DataAdidas'
+//import DataAdidas from '../../data/DataAdidas'
+import { collection, getDocs, getFirestore } from "firebase/firestore";
+
 
 const ItemDetailContainerAdidas = () => {
 
   const params = useParams();
 
-    const getItem = () => {
-        const promesa = new Promise((resolve) => {
-              setTimeout(() => {
-                //resolve(DataAdidas[0])
-                resolve(DataAdidas)
-              }, 500)  
-        })
-        return promesa
-    }
+    //  const getItem = () => {
+    //      const promesa = new Promise((resolve) => {
+    //            setTimeout(() => {
+    //              resolve(DataAdidas)
+    //            }, 500)  
+    //      })
+    //      return promesa
+    //  }
 
 
 
@@ -25,14 +26,24 @@ const ItemDetailContainerAdidas = () => {
       const [tenis, setTenis] = useState([]);
       
       useEffect(() => {
-        getItem()
-        .then(resultado => {
-          setTenis(resultado)
-      })
-        //setTenis(DatosAdidas)
+        const db = getFirestore();
+
+    const itemsCollection = collection(db, 'itemsAdidas')
+      getDocs(itemsCollection)
+      .then((snapshot) => {
+      const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}))
+      console.log(data);
+      setTenis(data)
+    })
+    .catch((error) => console.error(error))
+      //   getItem()
+      //    .then(resultado => {
+      //      setTenis(resultado)
+      //  })
+        
         
       }, [])
-      
+
       return tenis
     }
     

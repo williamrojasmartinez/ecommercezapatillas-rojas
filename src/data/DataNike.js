@@ -1,6 +1,7 @@
 const dataNike =  [
     {
       id: 1,
+      marca: "Nike",
       titulo: "Nike Zoom Blazer",
       //image: require('../images/nike1.webp'),
       image:"https://i.postimg.cc/sXnr0FNp/nike1.webp",
@@ -10,6 +11,7 @@ const dataNike =  [
     },
     {
       id: 2,
+      marca: "Nike",
       titulo: "Nike Force 58 PRM",
       //image: require('../images/nike2.webp'),
       image:"https://i.postimg.cc/8c9VNRDc/nike2.webp",
@@ -19,6 +21,7 @@ const dataNike =  [
     },
     {
       id: 3,
+      marca: "Nike",
       titulo: "Nike Ishod Wair",
       //image: require('../images/nike3.webp'),
       image:"https://i.postimg.cc/L4bStpfS/nike3.webp",
@@ -28,6 +31,7 @@ const dataNike =  [
     },
     {
       id: 4,
+      marca: "Nike",
       titulo: "Nike SB Nyjah",
       //image: require('../images/nike4.webp'),
       image:"https://i.postimg.cc/yxkzMfM2/nike4.webp",
@@ -37,6 +41,7 @@ const dataNike =  [
     },
     {
       id: 5,
+      marca: "Nike",
       titulo: "Nike Adversary Premium",
       //image: require('../images/nike5.webp'),
       image:"https://i.postimg.cc/bNShLBHt/nike5.webp",
@@ -46,6 +51,7 @@ const dataNike =  [
     },
     {
       id: 6,
+      marca: "Nike",
       titulo: "Nike Blazer Court",
       //image: require('../images/nike6.webp'),
       image:"https://i.postimg.cc/V6swRsDf/nike6.webp",
@@ -55,6 +61,7 @@ const dataNike =  [
     },
     {
       id: 7,
+      marca: "Nike",
       titulo: "Nike Force 58 Skate",
       //image: require('../images/nike7.webp'),
       image:"https://i.postimg.cc/R0L9KJ1p/nike7.webp",
@@ -64,6 +71,7 @@ const dataNike =  [
     },
     {
       id: 8,
+      marca: "Nike",
       titulo: "Nike Wair PRM ",
       //image: require('../images/nike8.webp'), 
       image:"https://i.postimg.cc/xd2nX3mb/nike8.webp",

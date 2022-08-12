@@ -6,12 +6,15 @@ const reducer = (state, action) =>
             switch (type) 
                 { 
                     case addProduct: 
-                     const stateTemp = [...state.cart, payload]
-                     return { cart: stateTemp }  
-
+                    const stateTemp = [...state.cart,payload]
+                    return { cart: stateTemp }
+                    
+                    
                     case removeProduct:
                     const result = state.cart.filter(tenis => tenis.id !== payload);
-                    return { cart: result } 
+                    return { 
+                        ...state,
+                        cart: result } 
                     
                     default: return state 
                 } 

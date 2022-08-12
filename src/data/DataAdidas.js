@@ -1,6 +1,7 @@
 const dataAdidas = [
   {
     id: 1,
+    marca: "Adidas",
     titulo: "Adidas Busenitz Vulc II",
     //image: require('../images/adidas1.webp'),
     image:"https://i.postimg.cc/NfH3RrB8/adidas1.webp",
@@ -11,6 +12,7 @@ const dataAdidas = [
 
   {
     id: 2,
+    marca: "Adidas",
     titulo: "Adidas Matchbreak Super",
     //image: require('../images/adidas2.webp'),
     image:"https://i.postimg.cc/05Fg6CR2/adidas2.webp",
@@ -21,6 +23,7 @@ const dataAdidas = [
 
   {
     id: 3,
+    marca: "Adidas",
     titulo: "Adidas Puig",
     //image: require('../images/adidas3.webp'),
     image:"https://i.postimg.cc/fy616Mj0/adidas3.webp",
@@ -31,6 +34,7 @@ const dataAdidas = [
 
   {
     id: 4,
+    marca: "Adidas",
     titulo: "Adidas Tyshawn Pro",
     //image: require('../images/adidas4.webp'),
     image:"https://i.postimg.cc/brGKCZbh/adidas4.webp",
@@ -41,6 +45,7 @@ const dataAdidas = [
 
   {
     id: 5,
+    marca: "Adidas",
     titulo: "Adidas Tyshawn Low",
     //image: require('../images/adidas5.webp'),
     image:"https://i.postimg.cc/KzYXTq84/adidas5.webp",
@@ -51,6 +56,7 @@ const dataAdidas = [
 
   {
     id: 6,
+    marca: "Adidas",
     titulo: "Adidas Busenitz Pro",
     //image: require('../images/adidas6.webp'),
     image:"https://i.postimg.cc/KYfSRSFd/adidas6.webp",
@@ -61,16 +67,18 @@ const dataAdidas = [
 
   {
     id: 7,
+    marca: "Adidas",
     titulo: "Adidas Samba",
     //image: require('../images/adidas7.webp'),
     image:"https://i.postimg.cc/vmbwYHRr/adidas7.webp",
     precio: 79,
-    descripcion: "El Samba ADV rinde homenaje a la profunda herencia futbolística de Adidas con un clásico T-Toe que recuerda el estilo original que debutó hace más de 50 años. Una plantilla moldeada asegura un ajuste similar al de un guante al envolver cómodamente el pie para mejorar la respuesta",
+    descripcion: "El Samba ADV rinde homenaje a la profunda herencia futbolística de Adidas con un clásico T-Toe que recuerda el estilo original que debutó hace más de 50 años. Una plantilla moldeada asegura un ajuste similar al de un guante al envolver cómodamente el pie para mejorar la respuesta.",
     stock: 3
   },
 
   {
     id: 8,
+    marca: "Adidas",
     titulo: "Adidas Superstart ADV",
     //image: require('../images/adidas8.webp'),
     image:"https://i.postimg.cc/Nj1wv2nG/adidas8.webp", 

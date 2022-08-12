@@ -2,30 +2,41 @@ import React, { useEffect, useState } from 'react'
 import  { Link } from "react-router-dom";
 import Cargando from "../../images/cargando.gif"
 import Item from '../itemList/Item'
-import DataAdidas from '../../data/DataAdidas'
+//import DataAdidas from '../../data/DataAdidas'
 import '../itemList/ItemList.css'
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 
 function ItemListAdidas() {
   
-    const mision = () => {
-    const promesa = new Promise(resolve => {
-        setTimeout(() => {
-            resolve(DataAdidas)
-        }, 1000)
-    })
-    return promesa
-  }
+//      const mision = () => {
+//      const promesa = new Promise(resolve => {
+//          setTimeout(() => {
+//              resolve(DataAdidas)
+//          }, 1000)
+//      })
+//      return promesa
+//    }
     
 function useTenisAdidas() {
 
 const [tenis, setTenis] = useState([])
 
 useEffect(() => {
-    mision()
-    .then(resultado => {
-        setTenis(resultado)
+    const db = getFirestore();
+
+    const itemsCollection = collection(db, 'itemsAdidas')
+       getDocs(itemsCollection)
+       .then((snapshot) => {
+       const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}))
+       console.log(data);
+       setTenis(data)
     })
+    .catch((error) => console.error(error))
+    //  mision()
+    //  .then(resultado => {
+    //      setTenis(resultado)
+    //  })
 }, [])
 
 return tenis
@@ -41,7 +52,7 @@ const tenisAdidas = useTenisAdidas()
         <section className='contenedorTenisAdidas'>
         
             {
-                Cargando < tenisAdidas  ? 
+                Cargando < tenisAdidas ? 
                 tenisAdidas.map(item => {
                     return (
                         <Item

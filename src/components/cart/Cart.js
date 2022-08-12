@@ -8,7 +8,7 @@ function Cart() {
 
   const { cartItem } = useContext(CartContext);
   const { removeProduct } = useContext(CartContext);
-  JSON.stringify(cartItem)
+  //JSON.stringify(cartItem)
 
   return (
     <div className='contenedorCarrito'>
