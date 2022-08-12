@@ -14,6 +14,7 @@ import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 function App() {
 
+// El useState i el useEffect es un ejemplo, despues se puede borrar
 const [value, setValue] = useState('')
 
   useEffect(() => {
