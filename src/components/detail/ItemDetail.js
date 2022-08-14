@@ -14,7 +14,9 @@ function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
     console.log(`Agregaste ${cantidad} al carrito`)
       
     for (let index = 0; index < cantidad; index++) {
-          addProduct(tenis)
+       
+        addProduct(tenis)
+
       
       }
     

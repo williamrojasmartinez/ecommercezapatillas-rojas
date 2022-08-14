@@ -28,7 +28,7 @@ const ItemDetailContainerAdidas = () => {
       useEffect(() => {
         const db = getFirestore();
 
-    const itemsCollection = collection(db, 'itemsAdidas')
+    const itemsCollection = collection(db, 'productos')
       getDocs(itemsCollection)
       .then((snapshot) => {
       const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}))

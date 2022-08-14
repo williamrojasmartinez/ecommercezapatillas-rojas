@@ -4,7 +4,7 @@ import Item from '../itemList/Item'
 //import DataNike from '../../data/DataNike'
 import '../itemList/ItemList.css'
 import Cargando from '../../images/cargando.gif'
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, where, query } from "firebase/firestore";
 
 
 function ItemListNike() {
@@ -25,14 +25,18 @@ const [tenis, setTenis] = useState([])
 useEffect(() => {
     const db = getFirestore();
 
-    const itemsCollection = collection(db, 'itemsNike')
-      getDocs(itemsCollection)
-      .then((snapshot) => {
-      const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}))
-      console.log(data);
-      setTenis(data)
+    const itemsCollection = collection(db, 'productos')
+
+    itemsCollection &&
+        getDocs(query(itemsCollection, where('marca', '==', 'Nike')))
+        .then((snapshot) => {
+        const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}))
+        console.log(data);
+        setTenis(data)
     })
     .catch((error) => console.error(error))
+      
+   
     // mision()
     // .then(resultado => {
     //     setTenis(resultado)

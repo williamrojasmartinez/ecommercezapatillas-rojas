@@ -16,13 +16,14 @@ function Cart() {
       {
         cartItem <= 0 ?
           <>
+          <div className='cartIcon'><box-icon name='cart' animation='tada' rotate='90' ></box-icon></div>
           <p className='parrafoCarrito'>Su carrito de compras se encuentra vacío. Escoge una de estas dos opciones:  <strong><a href='Adidas' className='enlaceCarrito'>Adidas</a>
           </strong> o <strong><a href='Nike' className='enlaceCarrito'>Nike</a></strong></p> 
           </>
          :
           cartItem.map((item, index) => {
           return (
-            <div className='itemProductos' key={index}>
+            <div className='itemProductos' key={index} data={item}>
                 <div className='carritoItem'><img src={item.image}/></div>
                 
                 <div className='titulo'>{item.titulo}</div>
@@ -35,7 +36,10 @@ function Cart() {
    
           
       }
-       
+       <div className='carritoFooter'>
+        <h3>Total: $0.00</h3>
+        <button className='btnComprar'>Comprar</button>
+       </div>
       
     </div>
     

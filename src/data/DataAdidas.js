@@ -17,7 +17,7 @@ const dataAdidas = [
     //image: require('../images/adidas2.webp'),
     image:"https://i.postimg.cc/05Fg6CR2/adidas2.webp",
     precio: 56,
-    descripcion: "El Matchbreak se inspira en los archivos de Adidas, pero trae toda la mejor tecnología moderna para el skateboarding. La puntera de una sola pieza se desgastará uniformemente y debajo hay una capa de ADITUFF™ para darle al zapato una vida más larga ",
+    descripcion: "El Matchbreak se inspira en los archivos de Adidas, pero trae toda la mejor tecnología moderna para el skateboarding. La puntera de una sola pieza se desgastará uniformemente y debajo hay una capa de ADITUFF™ para darle al zapato una vida más larga. ",
     stock: 8
   },
 

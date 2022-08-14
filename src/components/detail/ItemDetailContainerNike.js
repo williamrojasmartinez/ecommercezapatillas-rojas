@@ -30,7 +30,7 @@ function ItemDetailContainerNike() {
       useEffect(() => {
         const db = getFirestore();
 
-    const itemsCollection = collection(db, 'itemsNike')
+    const itemsCollection = collection(db, 'productos')
       getDocs(itemsCollection)
       .then((snapshot) => {
       const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}))
@@ -38,6 +38,7 @@ function ItemDetailContainerNike() {
       setTenis(data)
     })
     .catch((error) => console.error(error))
+
       //   getItem()
       //   .then(resultado => {
       //     setTenis(resultado)

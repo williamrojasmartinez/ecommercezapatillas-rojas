@@ -4,7 +4,7 @@ import Cargando from "../../images/cargando.gif"
 import Item from '../itemList/Item'
 //import DataAdidas from '../../data/DataAdidas'
 import '../itemList/ItemList.css'
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, where, query } from "firebase/firestore";
 
 
 function ItemListAdidas() {
@@ -25,14 +25,19 @@ const [tenis, setTenis] = useState([])
 useEffect(() => {
     const db = getFirestore();
 
-    const itemsCollection = collection(db, 'itemsAdidas')
-       getDocs(itemsCollection)
-       .then((snapshot) => {
-       const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}))
-       console.log(data);
-       setTenis(data)
+    const itemsCollection = collection(db, 'productos')
+
+       
+    itemsCollection &&
+        getDocs(query(itemsCollection, where('marca', '==', 'Adidas')))
+        .then((snapshot) => {
+        const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}))
+        console.log(data);
+        setTenis(data)
     })
     .catch((error) => console.error(error))
+      
+    
     //  mision()
     //  .then(resultado => {
     //      setTenis(resultado)

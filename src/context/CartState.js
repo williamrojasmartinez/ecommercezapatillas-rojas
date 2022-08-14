@@ -10,12 +10,13 @@ function CartState( props ) {
 
     const [state, dispatch] = useReducer(reducer, initialState)
 
-    const addProduct = (id) => {
-          dispatch({ type: 'addProduct', payload: id });
+    const addProduct = (tenis) => {
+          dispatch({ type: 'addProduct', payload: tenis });
     }
 
     const removeProduct = (tenis) => {
         dispatch({ type: 'removeProduct', payload: tenis });
+      
     }
 
 

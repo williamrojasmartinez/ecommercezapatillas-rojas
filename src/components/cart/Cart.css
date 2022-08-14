@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.cartIcon {
+    text-align: center;
+}
+
 .parrafoCarrito{
     font-family: sans-serif;
     font-size: 1.3rem;
@@ -16,7 +20,6 @@
 
  .contenedorCarrito{
     margin-top: 14rem;
-    /*position: fixed;*/
     top: 0;
     left: 0;
     width: 100%;
@@ -61,6 +64,31 @@
     height: 40px;
 }
 
+.carritoFooter{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.carritoFooter h3{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.carritoFooter .btnComprar{
+    display: inline-block;
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    background-color: #08a05c;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.carritoFooter .btnComprar:hover{
+    background-color: #0f5c39;
+    color: white;
+}
 
 
 
