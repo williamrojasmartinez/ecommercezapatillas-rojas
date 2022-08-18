@@ -1,0 +1,88 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+  }
+
+
+.cajaForm{
+    margin-top: 15rem;
+    max-width: 85%;
+}
+
+
+button {
+  cursor: pointer; 
+}
+
+
+.my-form{
+    text-align: center;  
+}
+
+
+.my-form input {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 85%;
+    line-height: 1.5;
+    padding: 15px 10px;
+    border: 1px solid var(--borderFormEls);
+    color: var(--white);
+    background: #F0D78C;
+    box-shadow: 0 1px 10px #08a05c;
+  }
+
+  
+  .my-form button {
+    margin-top: 2rem;
+    width: 30%;
+    padding: 15px 10px;
+    border: 1px solid var(--borderFormEls);
+    background: #F0D78C;
+    box-shadow: 0 1px 10px #08a05c
+  }
+
+  
+.my-form input:focus,
+.my-form button:focus {
+    background: #E6D2AA;
+}
+ 
+
+.cajaTextoCompra{
+    margin-top: 17rem;
+    text-align: center;
+}
+
+ 
+.parrafocompra1{
+    font-size: 1.5rem;
+}
+
+.parrafocompra2{
+    font-size: 1.5rem;
+}
+
+.strongId{
+    color: red;
+    font-size: 2rem;
+}
+
+.btnAceptar{
+    margin-top: 2rem;
+    display: inline-block;
+    padding: .5rem 2rem;
+    font-size: 1.4rem;
+    background-color: #08a05c;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.btnAceptar:hover{
+    background-color: #0f5c39;
+    color: white;}
+
+

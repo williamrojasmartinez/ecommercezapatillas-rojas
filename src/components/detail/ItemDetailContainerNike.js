@@ -2,28 +2,25 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import Cargando from '../../images/cargando.gif' 
 import ItemDetail from '../detail/ItemDetail'
-//import DataNike from '../../data/DataNike'
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 
+const ItemDetailContainerNike = () => {
 
-function ItemDetailContainerNike() {
-  
   const params = useParams();
 
-    // const getItem = () => {
-    //     const promesa = new Promise((resolve) => {
-    //           setTimeout(() => {
-    //             //resolve(DataAdidas[0])
-    //             resolve(DataNike)
-    //           }, 500)  
-    //     })
-    //     return promesa
-    // }
+    //  const getItem = () => {
+    //      const promesa = new Promise((resolve) => {
+    //            setTimeout(() => {
+    //              resolve(DataAdidas)
+    //            }, 500)  
+    //      })
+    //      return promesa
+    //  }
 
 
 
-    function useTenisAdidas() {
+    function useTenisNike() {
 
       const [tenis, setTenis] = useState([]);
       
@@ -38,20 +35,20 @@ function ItemDetailContainerNike() {
       setTenis(data)
     })
     .catch((error) => console.error(error))
-
       //   getItem()
-      //   .then(resultado => {
-      //     setTenis(resultado)
-      // })
+      //    .then(resultado => {
+      //      setTenis(resultado)
+      //  })
+        
         
       }, [])
-      
+
       return tenis
     }
     
-    const tenisAdidas = useTenisAdidas();
+    const tenisNike = useTenisNike();
     
-    const result = tenisAdidas.filter(tenis => tenis.id == params.id);
+    const result = tenisNike.filter(tenis => tenis.id == params.id);
     const product = result[0];
     console.log(product);
 
@@ -79,4 +76,3 @@ function ItemDetailContainerNike() {
 }
 
 export default ItemDetailContainerNike
-

@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import Cargando from '../../images/cargando.gif' 
 import ItemDetail from '../detail/ItemDetail'
-//import DataAdidas from '../../data/DataAdidas'
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 

@@ -9,8 +9,9 @@ import ItemDetailContainerAdidas from '../src/components/detail/ItemDetailContai
 import ItemDetailContainerNike from '../src/components/detail/ItemDetailContainerNike';
 import Cart from './components/cart/Cart';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import CartState from './context/CartState';
 import { doc, getDoc, getFirestore } from "firebase/firestore";
+import CartProvider from './context/CartContext';
+import Checkout from './components/form/Checkout';
 
 function App() {
 
@@ -38,7 +39,7 @@ const [value, setValue] = useState('')
 
   return (
     <div className="App">
-      <CartState>
+      <CartProvider>
         <BrowserRouter>
       
         <NavBar/>
@@ -71,6 +72,10 @@ const [value, setValue] = useState('')
                <Cart />
               </Route>
 
+              <Route path="/checkout" exact>
+               <Checkout />
+              </Route>
+
               <Route path="*" 
               component={NotFound}>
               </Route>
@@ -79,7 +84,7 @@ const [value, setValue] = useState('')
 
       
         </BrowserRouter>
-      </CartState>
+        </CartProvider>
     </div>
   )
 }

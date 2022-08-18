@@ -22,46 +22,49 @@
     margin-top: 14rem;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 99%;
 } 
 
 
- .itemProductos{
+.itemProductos{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr ;
+    align-items:center;
     width: 80%;
     margin: 2rem auto;
     box-shadow: 0 1px 10px #08a05c;
     border-radius: 5px;
-} 
+}
 
 .itemProductos img{
-    width: 10rem;
+   max-width: 9rem;
 }
 
 .titulo{
-    margin-top: 1.9rem;
     font-family: sans-serif;
+    font-weight: 580;
+    font-size: 1rem;
+    
+}
+
+.cantidad{
+    margin-left: 3rem;
     font-weight: 550;
-    font-size: 1.4rem;
+    font-size: 1rem;
+    color: red;
 }
 
 .itemProductos .precio{
-    margin-top: 1.9rem;
     color: #1a202c;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: bold;
-    text-align: start;
-    margin-left: -1rem;
+    margin-left: 3rem;
 }
 
 .itemProductos .remove box-icon{
-    fill: crimson;
+    fill: black;
     cursor: pointer;
-    margin-top: 1.9rem;
-    width: 60px;
-    height: 40px;
+    margin-left: 3rem;
 }
 
 .carritoFooter{
@@ -70,19 +73,20 @@
 }
 
 .carritoFooter h3{
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
 
 .carritoFooter .btnComprar{
     display: inline-block;
-    padding: .3rem 1rem;
-    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
     background-color: #08a05c;
     border: 0;
     outline: 0;
     cursor: pointer;
+    border-radius: 1rem;
 }
 
 .carritoFooter .btnComprar:hover{
@@ -90,41 +94,63 @@
     color: white;
 }
 
+.btnLimpiarCarrito{
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+    background-color: #08a05c;
+    margin-top: 2rem;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 1rem;
+}
 
-
-@media (max-width:679px){
-    .itemProductos img{
-        width: 9rem;
-    }
-    .titulo{
-        font-size: 1.2rem;
-    }
-    .itemProductos .precio{
-        font-size: 1.2rem;
-        
-    }
+.btnLimpiarCarrito:hover{
+    background-color: #0f5c39;
+    color: white;
 }
 
 
-
-@media (max-width:653px){
-    .itemProductos img{
-        width: 7rem;
+@media (max-width:582px){
+    .itemProductos{
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
     }
-    .titulo{
-        font-size: 1rem;
+    .cantidad{
+        margin-top: .5rem;
+        margin-left: 0.1rem;
     }
     .itemProductos .precio{
-        font-size: 1rem;
-        
+        margin-top: .5rem;
+        margin-left: 0.1rem;
     }
+    .itemProductos .remove box-icon{
+        margin-top: .5rem;
+        margin-left: 0.1rem;
+    }
+    
 }
 
-@media (max-width:345px){
-    .titulo{
-        display: none;
+@media (max-width:325px){
+    .itemProductos{
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .cantidad{
+        margin-top: .5rem;
+        margin-left: 0.1rem;
     }
     .itemProductos .precio{
-        margin-left: -1.5rem;
+        margin-top: .5rem;
+        margin-left: 0.1rem;
+    }
+    .itemProductos .remove box-icon{
+        margin-top: .5rem;
+        margin-left: 0.1rem;
     }
 }
