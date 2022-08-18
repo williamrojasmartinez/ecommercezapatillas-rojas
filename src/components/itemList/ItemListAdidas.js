@@ -70,12 +70,17 @@ const tenisAdidas = useTenisAdidas()
                     )
                 })
                 : <img className='cargando' src={`${Cargando}`}/>
-                
+                  
             }
-
+            
         </section>
+        
+           
+        
     </div>
+  
   )
+
 }
 
 export default ItemListAdidas

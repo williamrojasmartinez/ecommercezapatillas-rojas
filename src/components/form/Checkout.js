@@ -86,6 +86,8 @@ function Checkout() {
         <p className='parrafocompra2'>Tu código de referencia es: <strong className='strongId'>{orderId}</strong></p>
         <Link to={`/`}><button className='btnAceptar'>Aceptar</button></Link>
       </div>
+
+      
     }
     </>
     

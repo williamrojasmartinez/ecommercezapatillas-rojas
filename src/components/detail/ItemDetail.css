@@ -54,9 +54,13 @@
 }
 
 .card .details .talla ul{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    display: inline-block;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 .card .details .talla ul li{
@@ -106,7 +110,7 @@
 
 @media (max-width:780px){
     .card .details .talla ul{
-        display: flex;
+        display: inline-block;
         flex-wrap: wrap;
     }
     .card .details .precio{

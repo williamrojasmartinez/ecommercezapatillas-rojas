@@ -14,10 +14,10 @@ function ItemListContainer(props) {
     <div className="texto">
       <p className='parrafo'>
         {props.texto}
+        {props.img}
       </p> 
     </div>
-  
-
+    
     </>
   )
 }

@@ -2,29 +2,41 @@ import React, { useContext, useState } from 'react'
 import ItemCount from '../itemList/ItemCount'
 import '../../components/detail/ItemDetail.css'
 import { CartContext } from '../../context/CartContext';
+import swal from 'sweetalert';
 
 
 
-function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
+function ItemDetail({  titulo, image, descripcion, stock, precio, id, tallas }) {
 
 
   const { addToCart } = useContext(CartContext);
 
   const onAdd = (cantidad) => {
-    const tenis = {id, titulo, image, descripcion, stock, precio}
-   
-    console.log(`Agregaste ${cantidad} al carrito`)
+    const tenis = {id, titulo, image, descripcion, stock, precio, tallas}
 
-    const itemAComprar = {
-      id,
-      titulo,
-      image,
-      precio,
-      cantidad
-    }
-      
-    addToCart(itemAComprar)
+    const elementoActivo = document.querySelector('input[name="talla"]:checked')
+
+    if(elementoActivo){
+      console.log(elementoActivo.value)
+      console.log(`Agregaste ${cantidad} al carrito`)
+
+      const itemAComprar = {
+        id,
+        titulo,
+        image,
+        precio,
+        cantidad
+      }
+        
+      addToCart(itemAComprar)
     
+    } else {
+        swal({
+          text: "SELECCIONA UNA TALLA POR FAVOR",
+          icon: "error"
+        })
+    }
+   
     
   }
 
@@ -49,53 +61,24 @@ function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
 
                     <div className='talla'>
                                 
-                                <p>Tallas</p>
+                                <p>Tallas:</p>
 
-                                <ul>
-                                <li><input 
-                                    type="radio"
-                                    name="talla"
-                                    value="6.5"
-                                    />6.5</li>
-
-                                    <li><input 
-                                    type="radio"
-                                    name="talla"
-                                    value="7"/>7</li>
-                                    
-                                    <li><input 
-                                    type="radio"
-                                    name="talla"
-                                    value="7.5"/>7.5</li>
-
-                                    <li><input 
-                                    type="radio"
-                                    name="talla"
-                                    value="8"/>8</li>
-
-                                    <li><input 
-                                    type="radio"
-                                    name="talla"
-                                    value="8.5"/>8.5</li>
-
-                                    <li><input 
-                                    type="radio"
-                                    name="talla"
-                                    value="9"/>9</li>
-
-                                    <li><input 
-                                    type="radio"
-                                    name="talla"
-                                    value="9.5"/>9.5</li>
-
-                                    <li><input 
-                                    type="radio"
-                                    name="talla"
-                                    value="10"/>10</li>
-
-                                 </ul>
-                                  
-                              </div>
+                                  {
+                                   tallas.map((talla, index) => {
+                                    return <ul key={index}>
+                                              <li>
+                                                <input 
+                                                    type="radio"
+                                                    name="talla"
+                                                    value='tallas'
+                                                />
+                                                { talla }
+                                              </li>
+                                            </ul>
+                                   })
+                                   
+                                  }
+                    </div>
 
                     <div className='precio'>
                     {`$ ${precio}.00 `}

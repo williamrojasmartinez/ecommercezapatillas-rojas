@@ -6,12 +6,12 @@ import { initializeApp } from "firebase/app";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBNpULC2CMI-UgE-zJ6YdnnafO42ffTFGE",
-  authDomain: "ecommerce-worm.firebaseapp.com",
-  projectId: "ecommerce-worm",
-  storageBucket: "ecommerce-worm.appspot.com",
-  messagingSenderId: "700793274965",
-  appId: "1:700793274965:web:0ef0c0b5d1d86d14e14adc"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 initializeApp(firebaseConfig);

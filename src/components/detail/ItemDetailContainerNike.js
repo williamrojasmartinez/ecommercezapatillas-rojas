@@ -64,6 +64,7 @@ const ItemDetailContainerNike = () => {
                         stock={product.stock}
                         image={product.image}
                         precio={product.precio}
+                        tallas={product.tallas}
                      />
           </>         
           :
