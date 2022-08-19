@@ -33,9 +33,11 @@ function Cart() {
                 
                 <div className='titulo'>{item.titulo}<b className='size'>{` (Talla: ${item.tallas})`}</b></div>
 
-                <div className='cantidad'>{`Qty: ${item.cantidad}` }</div>
+                <div className='cantidad'> Qty: <b className='precios'>{item.cantidad}</b></div>
 
-                <div className='precio'>{` $ ${item.precio * item.cantidad}` }</div>
+                <div className='precioUnitario'>Precio unitario: <b className='precios'>{` $ ${item.precio}` }</b></div>
+
+                <div className='subtotal'>Subtotal: <b className='precios'>{`$ ${item.precio * item.cantidad}`}</b></div>
                 
                 <div className='remove' onClick={() => removeOneItem(item.id) }><box-icon  type='solid' name='trash'></box-icon></div>     
             </div>

@@ -27,8 +27,9 @@
 
 
 .itemProductos{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr ;
+    display: flex;
+    /* grid-template-columns: 1fr 2fr 1fr 1fr ; */
+    justify-content: space-evenly;
     align-items:center;
     width: 80%;
     margin: 2rem auto;
@@ -47,17 +48,29 @@
 }
 
 .size{
-    color: #0584d9;
+    /* color: #0584d9; */
+    color: #820000
+}
+
+.precios{
+    color: #820000
 }
 
 .cantidad{
     margin-left: 3rem;
     font-weight: 550;
     font-size: 1rem;
-    color: red;
+    /* color: red; */
 }
 
-.itemProductos .precio{
+.itemProductos .precioUnitario{
+    color: #1a202c;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 3rem;
+}
+
+.itemProductos .subtotal{
     color: #1a202c;
     font-size: 1rem;
     font-weight: bold;
@@ -65,7 +78,7 @@
 }
 
 .itemProductos .remove box-icon{
-    fill: black;
+    fill: #0F3D3E;
     cursor: pointer;
     margin-left: 3rem;
 }
@@ -115,7 +128,7 @@
 }
 
 
-@media (max-width:582px){
+@media (max-width:757px){
     .itemProductos{
         max-width: 90%;
         display: grid;
@@ -124,11 +137,15 @@
     }
     .cantidad{
         margin-top: .5rem;
-        margin-left: 0.1rem;
+        margin-left: -1rem;
     }
-    .itemProductos .precio{
+    .itemProductos .precioUnitario{
         margin-top: .5rem;
-        margin-left: 0.1rem;
+        margin-left: -1rem;
+    }
+    .itemProductos .subtotal{
+        margin-top: .5rem;
+        margin-left: -1rem;
     }
     .itemProductos .remove box-icon{
         margin-top: .5rem;
@@ -148,7 +165,7 @@
         margin-top: .5rem;
         margin-left: 0.1rem;
     }
-    .itemProductos .precio{
+    .itemProductos .subtotal{
         margin-top: .5rem;
         margin-left: 0.1rem;
     }

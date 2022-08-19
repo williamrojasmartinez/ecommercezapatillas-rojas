@@ -8,7 +8,6 @@ import ItemListContainer from './components/itemList/ItemListContainer'
 import FotoInicio from './images/fotoInicio.png'
 import ItemDetailContainerAdidas from '../src/components/detail/ItemDetailContainerAdidas';
 import ItemDetailContainerNike from '../src/components/detail/ItemDetailContainerNike';
-//import Footer from './components/footer/Footer';
 import Cart from './components/cart/Cart';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { doc, getDoc, getFirestore } from "firebase/firestore";
@@ -93,9 +92,9 @@ const [value, setValue] = useState('')
 
 function NotFound() {
   return (
-    <div>
+    <>
       <h1 className='notFound'>404 Not Found (Llegaste a una página que no existe)</h1> 
-    </div>  
+    </>  
   ) 
 }
 
