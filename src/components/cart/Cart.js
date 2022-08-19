@@ -31,7 +31,7 @@ function Cart() {
             <div className='itemProductos' key={index} data={item}>
                 <div className='carritoItem'><img src={item.image}/></div>
                 
-                <div className='titulo'>{item.titulo}</div>
+                <div className='titulo'>{item.titulo}<b className='size'>{` (Talla: ${item.tallas})`}</b></div>
 
                 <div className='cantidad'>{`Qty: ${item.cantidad}` }</div>
 

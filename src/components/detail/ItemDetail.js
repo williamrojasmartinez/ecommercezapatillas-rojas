@@ -6,25 +6,26 @@ import swal from 'sweetalert';
 
 
 
-function ItemDetail({  titulo, image, descripcion, stock, precio, id, tallas }) {
+function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
 
 
   const { addToCart } = useContext(CartContext);
 
-  const onAdd = (cantidad) => {
+  const onAdd = (cantidad, tallas) => {
     const tenis = {id, titulo, image, descripcion, stock, precio, tallas}
 
     const elementoActivo = document.querySelector('input[name="talla"]:checked')
 
     if(elementoActivo){
-      console.log(elementoActivo.value)
       console.log(`Agregaste ${cantidad} al carrito`)
+      console.log(`Talla: ${elementoActivo.value}`)
 
       const itemAComprar = {
         id,
         titulo,
         image,
         precio,
+        tallas: [elementoActivo.value],
         cantidad
       }
         
@@ -39,7 +40,6 @@ function ItemDetail({  titulo, image, descripcion, stock, precio, id, tallas }) 
    
     
   }
-
 
   return (
     <div className='tarjetas'>
@@ -63,21 +63,48 @@ function ItemDetail({  titulo, image, descripcion, stock, precio, id, tallas }) 
                                 
                                 <p>Tallas:</p>
 
-                                  {
-                                   tallas.map((talla, index) => {
-                                    return <ul key={index}>
-                                              <li>
-                                                <input 
-                                                    type="radio"
-                                                    name="talla"
-                                                    value='tallas'
-                                                />
-                                                { talla }
-                                              </li>
-                                            </ul>
-                                   })
-                                   
-                                  }
+                                <ul>
+                                 
+                                  <li>
+                                    <input type="radio" name="talla" value='6.5' /> 6.5 
+                                  </li>
+
+
+                                  <li>
+                                    <input type="radio" name="talla" value='7' /> 7 
+                                  </li>
+
+
+                                  <li>
+                                    <input type="radio" name="talla" value='7.5' /> 7.5 
+                                  </li>
+
+
+                                  <li>
+                                    <input type="radio" name="talla" value='8' /> 8 
+                                  </li>
+
+
+                                  <li>
+                                    <input type="radio" name="talla" value='8.5' /> 8.5 
+                                  </li>
+
+
+                                  <li>
+                                    <input type="radio" name="talla" value='9' /> 9 
+                                  </li>
+
+
+                                  <li>
+                                    <input type="radio" name="talla" value='9.5' /> 9.5 
+                                  </li>
+
+
+                                  <li>
+                                    <input type="radio" name="talla" value='10' /> 10 
+                                  </li>     
+                                
+                                </ul>
                     </div>
 
                     <div className='precio'>
