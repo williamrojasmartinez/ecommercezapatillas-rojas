@@ -6,17 +6,7 @@ import { collection, getDocs, getFirestore } from "firebase/firestore";
 function ItemDetailContainerNewBalance() {
     const params = useParams();
 
-    //  const getItem = () => {
-    //      const promesa = new Promise((resolve) => {
-    //            setTimeout(() => {
-    //              resolve(DataNewB)
-    //            }, 500)  
-    //      })
-    //      return promesa
-    //  }
-
-
-
+    
     function useTenisNewBalance() {
 
       const [tenis, setTenis] = useState([]);
@@ -32,12 +22,7 @@ function ItemDetailContainerNewBalance() {
       setTenis(data)
     })
     .catch((error) => console.error(error))
-      //   getItem()
-      //    .then(resultado => {
-      //      setTenis(resultado)
-      //  })
-        
-        
+       
       }, [])
 
       return tenis

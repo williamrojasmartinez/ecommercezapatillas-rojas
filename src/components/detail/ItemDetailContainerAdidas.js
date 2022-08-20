@@ -8,16 +8,6 @@ const ItemDetailContainerAdidas = () => {
 
   const params = useParams();
 
-    //  const getItem = () => {
-    //      const promesa = new Promise((resolve) => {
-    //            setTimeout(() => {
-    //              resolve(DataAdidas)
-    //            }, 500)  
-    //      })
-    //      return promesa
-    //  }
-
-
 
     function useTenisAdidas() {
 
@@ -34,12 +24,7 @@ const ItemDetailContainerAdidas = () => {
       setTenis(data)
     })
     .catch((error) => console.error(error))
-      //   getItem()
-      //    .then(resultado => {
-      //      setTenis(resultado)
-      //  })
-        
-        
+      
       }, [])
 
       return tenis

@@ -7,16 +7,6 @@ import { collection, getDocs, getFirestore, where, query } from "firebase/firest
 
 function ItemListNewBalance() {
 
-//     const mision = () => {
-//     const promesa = new Promise(resolve => {
-//         setTimeout(() => {
-//             resolve(DataNike)
-//         }, 1000)
-//     })
-//     return promesa
-//   }
-
-
 function useTenisNewBalance() {
 
     const [tenis, setTenis] = useState([])
@@ -35,11 +25,6 @@ function useTenisNewBalance() {
         })
         .catch((error) => console.error(error))
           
-       
-        // mision()
-        // .then(resultado => {
-        //     setTenis(resultado)
-        // })
     }, [])
     
     return tenis

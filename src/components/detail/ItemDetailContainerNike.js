@@ -8,17 +8,6 @@ const ItemDetailContainerNike = () => {
 
   const params = useParams();
 
-    //  const getItem = () => {
-    //      const promesa = new Promise((resolve) => {
-    //            setTimeout(() => {
-    //              resolve(DataAdidas)
-    //            }, 500)  
-    //      })
-    //      return promesa
-    //  }
-
-
-
     function useTenisNike() {
 
       const [tenis, setTenis] = useState([]);
@@ -34,12 +23,7 @@ const ItemDetailContainerNike = () => {
       setTenis(data)
     })
     .catch((error) => console.error(error))
-      //   getItem()
-      //    .then(resultado => {
-      //      setTenis(resultado)
-      //  })
-        
-        
+       
       }, [])
 
       return tenis

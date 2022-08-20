@@ -20,28 +20,6 @@ import Checkout from './components/form/Checkout';
 
 function App() {
 
-// El useState i el useEffect es un ejemplo, despues se puede borrar
-const [value, setValue] = useState('')
-
-  useEffect(() => {
-    const db = getFirestore();
-    const docref = doc(db, 'itemsAdidas', '17yY42rRtTLfCzIAM6wk')
-    getDoc(docref)
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        const data = {
-          id: snapshot.id,
-          ...snapshot.data()
-        }
-        console.log(data)
-        setValue(data)
-      }
-    })
-    .catch((error) => console.error(error))
-  }, [])
-
-
-
   return (
     <div className="App">
       <CartProvider>
