@@ -50,7 +50,7 @@ function useTenisNewBalance() {
     
         return (
         <div className='contenedorAdidas'>
-            <h2>NIKE</h2>
+            <h2>NEW BALANCE</h2>
     
             <section className='contenedorTenisAdidas'>
             
