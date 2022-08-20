@@ -35,7 +35,7 @@ Su aplicación está lista para ser desplegada.
 Para más informacion vea la sección sobre [deployment](https://facebook.github.io/create-react-app/docs/deployment) 
 
 ### `Información` 
-Proyecto final para ser entregado en el curso de React js que se curso en CoderHause (comisión 34680).
+Proyecto final para ser entregado en el curso de React js que se realizó en CoderHause (comisión 34680).
 
 ### `Tecnoligías`
 Lista de tecnologías utilizadas en el proyecto:
