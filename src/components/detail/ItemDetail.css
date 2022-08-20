@@ -4,15 +4,14 @@
     box-sizing: border-box;
 }
 
-.cargando{
-    display: block;
-    margin-left: auto; 
-    margin-right: auto;
-    margin-top: 11rem;
+.noEncontrado{
+    margin-top: 15rem;
+    margin-left: 2rem;
+    color: blue;
 }
 
 .tarjetas{
-    margin-top: 8rem;
+    margin-top: 12rem;
 }
 
 .card{
@@ -91,7 +90,7 @@
 
 @media (max-width:599px){
     .tarjetas{
-        margin-top: 12rem;
+        margin-top: 14.5rem;
     }
     }
 

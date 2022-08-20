@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
-import Cargando from '../../images/cargando.gif' 
+import { useParams } from 'react-router-dom' 
 import ItemDetail from '../detail/ItemDetail'
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
@@ -55,7 +54,7 @@ const ItemDetailContainerAdidas = () => {
   return (
     <div>
         {
-          product !== undefined ?
+          product !== undefined ? 
           <>
                      <ItemDetail
                         id={product.id}
@@ -66,9 +65,10 @@ const ItemDetailContainerAdidas = () => {
                         precio={product.precio}
                         tallas={product.tallas}
                      />
-          </>         
-          :
-          <img className='cargando' src={`${Cargando}`}/>
+                      
+          </> 
+           :  <h1 className='noEncontrado'>Articulo no encontrado</h1>
+          
 
         }
     

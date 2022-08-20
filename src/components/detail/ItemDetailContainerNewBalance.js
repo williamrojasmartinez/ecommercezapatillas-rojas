@@ -3,15 +3,13 @@ import { useParams } from 'react-router-dom'
 import ItemDetail from '../detail/ItemDetail'
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
-
-const ItemDetailContainerNike = () => {
-
-  const params = useParams();
+function ItemDetailContainerNewBalance() {
+    const params = useParams();
 
     //  const getItem = () => {
     //      const promesa = new Promise((resolve) => {
     //            setTimeout(() => {
-    //              resolve(DataAdidas)
+    //              resolve(DataNewB)
     //            }, 500)  
     //      })
     //      return promesa
@@ -19,7 +17,7 @@ const ItemDetailContainerNike = () => {
 
 
 
-    function useTenisNike() {
+    function useTenisNewBalance() {
 
       const [tenis, setTenis] = useState([]);
       
@@ -45,9 +43,9 @@ const ItemDetailContainerNike = () => {
       return tenis
     }
     
-    const tenisNike = useTenisNike();
+    const tenisNewBalance = useTenisNewBalance();
     
-    const result = tenisNike.filter(tenis => tenis.id == params.id);
+    const result = tenisNewBalance.filter(tenis => tenis.id == params.id);
     const product = result[0];
     console.log(product);
 
@@ -75,4 +73,4 @@ const ItemDetailContainerNike = () => {
   )
 }
 
-export default ItemDetailContainerNike
+export default ItemDetailContainerNewBalance

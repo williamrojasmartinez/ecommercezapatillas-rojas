@@ -58,6 +58,7 @@ const tenisAdidas = useTenisAdidas()
         
             {
                 Cargando < tenisAdidas ? 
+                
                 tenisAdidas.map(item => {
                     return (
                         <Item
@@ -69,7 +70,9 @@ const tenisAdidas = useTenisAdidas()
                         />
                     )
                 })
+                
                 : <img className='cargando' src={`${Cargando}`}/>
+                
                   
             }
             

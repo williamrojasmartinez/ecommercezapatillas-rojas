@@ -22,7 +22,7 @@ function Cart() {
           <>
           <div className='cartIcon'><img className='cargando' src={`${Carro}`}/></div>
           <p className='parrafoCarrito'>Su carrito de compras se encuentra vacío. Escoge una de estas dos opciones:  <strong><a href='Adidas' className='enlaceCarrito'>Adidas</a>
-          </strong> o <strong><a href='Nike' className='enlaceCarrito'>Nike</a></strong></p> 
+          </strong>, <strong><a href='Nike' className='enlaceCarrito'>Nike</a></strong> o <strong><a href='new-balance' className='enlaceCarrito'>New Balance</a></strong></p> 
           </>
          :  
             cart.map((item, index) => {
