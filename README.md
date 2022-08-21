@@ -4,6 +4,10 @@ Este proyecto fue iniciado con [Create React App](https://github.com/facebook/cr
 
 ![](/ecommerce.gif "")
 
+Worm Sports es un ecommerce de zapatillas deportivas diseñado para presentar como proyecto final en el curso de React js en CoderHause; La idea es ir mejorando esta aplicacióna a medida que adquiera más conocimientos en programación.
+
+Elegí hacer este ecommerce con el tema de Zapatillas deportivas porque soy un fanatico de dicho calzado, por su estética, por su comodidad al caminar, por la gran variedad de deportes que se pueden practicar con ellos y sobre todo y más importante por salud.
+
 
 ### `Aplicación en Internet`
 https://ecommerce-zapatillas.netlify.app/
