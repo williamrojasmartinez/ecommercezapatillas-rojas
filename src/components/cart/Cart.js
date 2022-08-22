@@ -21,7 +21,7 @@ function Cart() {
         cart <= 0 ?
           <>
           <div className='cartIcon'><img className='cargando' src={`${Carro}`}/></div>
-          <p className='parrafoCarrito'>Su carrito de compras se encuentra vacío. Escoge una de estas dos opciones:  <strong><a href='Adidas' className='enlaceCarrito'>Adidas</a>
+          <p className='parrafoCarrito'>Su carrito de compras se encuentra vacío. Escoge una de estas opciones:  <strong><a href='Adidas' className='enlaceCarrito'>Adidas</a>
           </strong>, <strong><a href='Nike' className='enlaceCarrito'>Nike</a></strong> o <strong><a href='new-balance' className='enlaceCarrito'>New Balance</a></strong></p> 
           </>
          :  
