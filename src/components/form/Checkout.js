@@ -1,4 +1,5 @@
 import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore'
+import swal from 'sweetalert';
 import  { Link } from "react-router-dom";
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
@@ -14,16 +15,52 @@ function Checkout() {
     const { vaciarCart } = useContext(CartContext)
     
 
-    const datosComprador = (e) => {
-        e.preventDefault()
-        setComprador({
-            ...comprador,
-            [e.target.name]: e.target.value
-        })
-    }
+     const datosComprador = (e) => {
+         e.preventDefault()
+         setComprador({
+             ...comprador,
+             [e.target.name]: e.target.value
+         })
+     }
+
+
 
     const finalizarCompra = (e) => {
         e.preventDefault()
+
+        const name = document.querySelector(".inputNombre").value
+        const expresionNom = /^[a-zA-ZÀ-ÿ\s]{3,20}$/
+        if (!expresionNom.test(name)) {
+          swal({
+            text: "Para el Nombre solo se permite letras y espacios (entre 3 y 20 letras)",
+            icon: "warning"
+          })
+        return false
+      }
+
+
+        const ape = document.querySelector(".inputApellido").value
+        const expresionApe = /^[a-zA-ZÀ-ÿ\s]{3,20}$/
+        if (!expresionApe.test(ape)) {
+          swal({
+            text: "Para el Apellido solo se permite letras y espacios (entre 3 y 20 letras)",
+            icon: "warning"
+          })
+        return false
+      }
+
+
+         const Telefono = document.querySelector(".inputTel").value
+         const expresionTel = /^[3|6]?[ -]*([0-9][ -]*){9}$/
+         if (!expresionTel.test(Telefono)) {
+          swal({
+            text: "Para el Telefonoolo solo se permiten números que empiecen por 3 o 6 y que no superen los 10 números",
+            icon: "warning"
+          })
+         return false
+       } 
+
+
 
         const db = getFirestore();
         const ventasCollection = collection(db, "ventas")
@@ -48,14 +85,15 @@ function Checkout() {
         
         <form onSubmit={finalizarCompra} className='my-form'>
         <h3 className='tituloH3Form'>Checkout</h3>
-          <input 
+          <input className='inputNombre'
               type="text" 
               placeholder="Nombre" 
               name="nombre" 
               required
-              onChange={datosComprador} />  
+              onChange={datosComprador} 
+              />  
           
-          <input 
+          <input className='inputApellido'
               type="text" 
               placeholder="Apellido" 
               name="apellido" 
@@ -69,7 +107,7 @@ function Checkout() {
               required 
               onChange={datosComprador} />  
           
-          <input 
+          <input className='inputTel'
               type="tel" 
               placeholder="Telefono" 
               name="telefono" 
