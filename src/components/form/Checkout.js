@@ -54,7 +54,7 @@ function Checkout() {
          const expresionTel = /^[3|6]?[ -]*([0-9][ -]*){9}$/
          if (!expresionTel.test(Telefono)) {
           swal({
-            text: "Para el Telefonoolo solo se permiten números que empiecen por 3 o 6 y que no superen los 10 números",
+            text: "Para el Teléfono solo se permiten números que empiecen por 3 o 6 y obligatoriamente tener 10 números en total",
             icon: "warning"
           })
          return false
