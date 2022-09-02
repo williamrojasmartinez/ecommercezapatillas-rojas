@@ -8,7 +8,7 @@ function Item({ id, marca, titulo, image, precio, boton }) {
       {id}
       {marca}
       {titulo}
-      <img src={image} />
+      <img src={image} alt='Tenis' />
       {`$ ${precio}.00 `}
       {boton}
     </div>

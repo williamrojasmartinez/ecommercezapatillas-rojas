@@ -20,7 +20,7 @@ function Cart() {
       {
         cart <= 0 ?
           <>
-          <div className='cartIcon'><img className='cargando' src={`${Carro}`}/></div>
+          <div className='cartIcon'><img className='cargando' src={`${Carro}`} alt='carro vacio'/></div>
           <p className='parrafoCarrito'>Su carrito de compras se encuentra vacío. Escoge una de estas opciones:  <strong><a href='Adidas' className='enlaceCarrito'>Adidas</a>
           </strong>, <strong><a href='Nike' className='enlaceCarrito'>Nike</a></strong> o <strong><a href='new-balance' className='enlaceCarrito'>New Balance</a></strong></p> 
           </>
@@ -29,7 +29,7 @@ function Cart() {
           return (
             
             <div className='itemProductos' key={index} data={item}>
-                <div className='carritoItem'><img src={item.image}/></div>
+                <div className='carritoItem'><img src={item.image} alt='producto'/></div>
                 
                 <div className='titulo'>{item.titulo}<b className='size'>{` (Talla: ${item.tallas})`}</b></div>
 
@@ -47,7 +47,7 @@ function Cart() {
       }
       <>
       {
-      cart != 0 &&  
+      cart !== 0 &&  
       <div className='carritoFooter '>
         <h3>Total: $ { precioTotal() }</h3>
         <Link to={`/Checkout`}><button className='btnComprar '>Finalizar Compra</button></Link>

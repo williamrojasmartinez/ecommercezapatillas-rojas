@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import ItemCount from '../itemList/ItemCount'
 import '../../components/detail/ItemDetail.css'
 import { CartContext } from '../../context/CartContext';
@@ -46,7 +46,7 @@ function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
         <div className='card'>
 
             <div className='imgBox'>
-                <img src={image} />
+                <img src={image} alt='Tenis'/>
             </div>
 
                 <div className='details'>
