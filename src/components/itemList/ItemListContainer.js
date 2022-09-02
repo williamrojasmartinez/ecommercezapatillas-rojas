@@ -59,7 +59,7 @@ function ItemListContainer(props) {
                             titulo={item.titulo}
                             image={item.image}
                             precio={item.precio}   
-                            boton={<Link to={`/marca/${item.id}`}><button className='boton'>Más detalles</button></Link>}
+                            boton={<Link to={`/detalle/${item.id}`}><button className='boton'>Más detalles</button></Link>}
                             
                         />
                     )
