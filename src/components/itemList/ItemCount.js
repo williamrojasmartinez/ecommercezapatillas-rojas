@@ -26,7 +26,7 @@ const aumentar = () => {
         <div className='texto-y-boton'>
             <h6>{`Quedan ${stock} unidades`}</h6>
             
-            <button className='btn-agregar' onClick={() => onAdd(count)}>Agregar al Carrito</button>
+             <button className='btn-agregar' id='agregar' onClick={() => onAdd(count)}>Agregar al Carrito</button>
         </div>
 
     </div>

@@ -37,17 +37,17 @@ function ItemListContainer(props) {
 
   return (
     <>
-
-   <div className="texto">
+    {
+      !marca ?
+      <div className="texto">
       <p className='parrafo'>
         {props.texto}
         {props.img}
       </p> 
-    </div>  
-
-
+    </div>
+    :
     <div className='contenedorAdidas'>
-        <h2>{marca}</h2>
+    <h2 className='h2Marca'>{marca}</h2>
 
       <section className='contenedorTenisAdidas'>
 
@@ -69,6 +69,10 @@ function ItemListContainer(props) {
 
       </section>
     </div>
+    }
+     
+
+    
     
     </>
 

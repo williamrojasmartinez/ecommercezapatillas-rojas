@@ -19,10 +19,18 @@ function App() {
     <div className="App">
       <CartProvider>
         <BrowserRouter>
-      
+        
         <NavBar/>
-
+         
             <Switch>
+
+              <Route path="/cart" exact>
+               <Cart />
+              </Route>
+
+              <Route path="/checkout" exact>
+               <Checkout />
+              </Route>
 
               <Route path="/" exact>
                 <ItemListContainer 
@@ -30,7 +38,6 @@ function App() {
                 img={<img className='fotoInicio' src={`${FotoInicio}`} alt='Foto de inicio'/>}
                 />
               </Route> 
-
 
               <Route path="/:marca" exact>
                   <ItemListContainer />
@@ -41,23 +48,16 @@ function App() {
                 <ItemDetailContainer />
               </Route>
 
-              <Route path="/cart" exact>
-               <Cart />
-              </Route>
-
-              <Route path="/checkout" exact>
-               <Checkout />
-              </Route>
-
               <Route path="*"
               component={NotFound} >
-              </Route> 
-              
-            
+              </Route>
+
             </Switch>
             
         </BrowserRouter>
+        
       </CartProvider>
+       
     </div>
   )
 }

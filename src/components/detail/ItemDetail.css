@@ -11,7 +11,7 @@
 }
 
 .tarjetas{
-    margin-top: 12rem;
+    margin-top: 8rem;
 }
 
 .card{
@@ -87,6 +87,13 @@
     justify-content: space-between;
     font-size: 30px ;
 }
+
+
+@media (max-width:652px){
+    .tarjetas{
+        margin-top: 13rem;
+    }
+    }
 
 @media (max-width:599px){
     .tarjetas{

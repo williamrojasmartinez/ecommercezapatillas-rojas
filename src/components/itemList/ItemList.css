@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+.h2Marca{
+    margin-top: -9rem;
+}
+
 .contenedorAdidas{
-    margin-top: 10rem;
+    margin-top: 16rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,18 +52,30 @@
 .boton:hover{
     background: #ddd;
 }
- 
 
-@media (max-width:599px) {
-.contenedorAdidas{
-    margin-top: 12rem;
+@media (max-width:639px) {
+    .contenedorTenisAdidas{
+        margin-top: 7rem;
+    }
+
 }
-}
+
+
+ @media (max-width:599px) {
+    .contenedorAdidas{
+        margin-top: -1rem;
+    }
+    .contenedorTenisAdidas{
+        margin-top: 14rem;
+    }
+
+} 
 
 @media (max-width:358px) {
-    .cardAdidas{
+    
+     .cardAdidas{
         box-shadow: none;
-    }
+    } 
     .cardAdidas img{
         width: 90%;
     }

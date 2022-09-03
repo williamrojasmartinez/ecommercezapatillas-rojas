@@ -8,6 +8,7 @@ import '../cart/Cart.css'
 
 function Cart() {
 
+
   const { cart } = useContext(CartContext) 
   console.log(cart)
   const { removeOneItem } = useContext(CartContext);
@@ -21,8 +22,8 @@ function Cart() {
         cart <= 0 ?
           <>
           <div className='cartIcon'><img className='cargando' src={`${Carro}`} alt='carro vacio'/></div>
-          <p className='parrafoCarrito'>Su carrito de compras se encuentra vacío. Escoge una de estas opciones:  <strong><a href='Adidas' className='enlaceCarrito'>Adidas</a>
-          </strong>, <strong><a href='Nike' className='enlaceCarrito'>Nike</a></strong> o <strong><a href='new-balance' className='enlaceCarrito'>New Balance</a></strong></p> 
+          <p className='parrafoCarrito'>Su carrito de compras se encuentra vacío. Escoge una de estas opciones:  <strong><a href='adidas' className='enlaceCarrito'>adidas</a>
+          </strong>, <strong><a href='nike' className='enlaceCarrito'>nike</a></strong> o <strong><a href='new-balance' className='enlaceCarrito'>new-balance</a></strong></p> 
           </>
          :  
             cart.map((item, index) => {
@@ -47,7 +48,7 @@ function Cart() {
       }
       <>
       {
-      cart !== 0 &&  
+      cart != 0 &&  
       <div className='carritoFooter '>
         <h3>Total: $ { precioTotal() }</h3>
         <Link to={`/Checkout`}><button className='btnComprar '>Finalizar Compra</button></Link>
