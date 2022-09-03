@@ -14,11 +14,13 @@ function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
   const onAdd = (cantidad, tallas) => {
     const tenis = {id, titulo, image, descripcion, stock, precio, tallas}
 
-    document.getElementById("agregar").style.display = "none";
+    
+    
 
     const elementoActivo = document.querySelector('input[name="talla"]:checked')
 
     if(elementoActivo){
+      document.getElementById("agregar").style.display = "none";
       console.log(`Agregaste ${cantidad} al carrito`)
       console.log(`Talla: ${elementoActivo.value}`)
 

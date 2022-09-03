@@ -5,7 +5,7 @@
 }
 
 .h2Marca{
-    margin-top: -9rem;
+    margin-top: -7rem;
 }
 
 .contenedorAdidas{
@@ -55,7 +55,10 @@
 
 @media (max-width:639px) {
     .contenedorTenisAdidas{
-        margin-top: 7rem;
+        margin-top: 4rem;
+    }
+    .h2Marca{
+        margin-top: -5rem;
     }
 
 }
