@@ -43,11 +43,10 @@ function App() {
                   <ItemListContainer />
               </Route>
 
-
               <Route path="/detalle/:id" exact>
                 <ItemDetailContainer />
               </Route>
-
+              
               <Route path="*"
               component={NotFound} >
               </Route>

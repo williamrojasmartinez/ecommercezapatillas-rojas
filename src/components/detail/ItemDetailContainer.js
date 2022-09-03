@@ -27,24 +27,23 @@ function ItemDetailContainer() {
           .finally(()=> setLoading(false))
        },[id])
 
-       
-       const product = detalleProducto[0];
-       console.log(product);
+
 
   return (
     <div>
         { 
-          loading ? <h1 className='noEncontrado'>Articulo no encontrado</h1>
-          :
-            <ItemDetail
-             id={detalleProducto.id}
-             titulo={detalleProducto.titulo}
-             descripcion={detalleProducto.descripcion}
-             stock={detalleProducto.stock}
-             image={detalleProducto.image}
-             precio={detalleProducto.precio}
-             tallas={detalleProducto.tallas}
-           />
+           loading ? <h1 className='noEncontrado'>Articulo no encontrado....</h1>
+           :
+             <ItemDetail
+              id={detalleProducto.id}
+              titulo={detalleProducto.titulo}
+              descripcion={detalleProducto.descripcion}
+              stock={detalleProducto.stock}
+              image={detalleProducto.image}
+              precio={detalleProducto.precio}
+              tallas={detalleProducto.tallas}
+            />
+          
            
         }
     </div>

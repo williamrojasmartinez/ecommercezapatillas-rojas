@@ -50,7 +50,7 @@ function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
         <div className='card'>
 
             <div className='imgBox'>
-                <img src={image} alt='Tenis'/>
+                <img src={image} />
             </div>
 
                 <div className='details'>
