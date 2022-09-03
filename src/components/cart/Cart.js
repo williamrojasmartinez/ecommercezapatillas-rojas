@@ -8,7 +8,6 @@ import '../cart/Cart.css'
 
 function Cart() {
 
-
   const { cart } = useContext(CartContext) 
   console.log(cart)
   const { removeOneItem } = useContext(CartContext);
