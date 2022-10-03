@@ -22,7 +22,7 @@ const addToCart = (item) => {
         })
         setCart(updateCart)
     } else {
-        setCart([...cart, item]) 
+         setCart([...cart, item]) 
     }
 
 }
