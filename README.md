@@ -49,7 +49,7 @@ Lista de tecnologías utilizadas en el proyecto:
 - Javascript
 - React JS
 - Hooks (useState, useEffect, useContext, useParams)
-- React-Router-Dom
+- React-Router-Dom V6
 - Firebase
 - Postimages
 - boxicons
