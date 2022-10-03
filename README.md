@@ -2,7 +2,7 @@
 
 Este proyecto fue iniciado con [Create React App](https://github.com/facebook/create-react-app).
 
-![](/ecommerce.gif "")
+![](/ecommerceTenis.gif "")
 
 Worm Sports es un ecommerce de zapatillas deportivas diseñado para presentar como proyecto final en el curso de React js en CoderHause; La idea es ir mejorando esta aplicacióna a medida que adquiera más conocimientos en programación.
 
