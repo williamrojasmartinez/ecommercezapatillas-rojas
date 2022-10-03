@@ -12,7 +12,7 @@ function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
   const { addToCart } = useContext(CartContext);
 
   const onAdd = (cantidad, tallas) => {
-    const tenis = {id, titulo, image, descripcion, stock, precio, tallas}
+   // const tenis = {id, titulo, image, descripcion, stock, precio, tallas}
 
     
     
@@ -50,7 +50,7 @@ function ItemDetail({  titulo, image, descripcion, stock, precio, id }) {
         <div className='card'>
 
             <div className='imgBox'>
-                <img src={image} />
+                <img src={image} alt="Imagen teni deportivo"/>
             </div>
 
                 <div className='details'>
