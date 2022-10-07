@@ -20,13 +20,13 @@ const NavBar = () => {
                   <Link to='/'>Inicio</Link>
                 </li>
                 <li>
-                  <Link to='/adidas'>Adidas</Link>
+                  <Link to='marca/adidas'>Adidas</Link>
                 </li>
                 <li>
-                  <Link to='/nike'>Nike</Link>
+                  <Link to='marca/nike'>Nike</Link>
                 </li>
                 <li>
-                  <Link to='/new-balance'>New Balance</Link>
+                  <Link to='marca/new-balance'>New Balance</Link>
                 </li>
               </ul>
         </nav>

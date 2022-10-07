@@ -40,7 +40,7 @@ function App() {
               >
               </Route>
               
-              <Route path="/:marca" element={<ItemListContainer />} />
+              <Route path="marca/:marca" element={<ItemListContainer />} />
               
               <Route path="/detalle/:id" element={<ItemDetailContainer />} />
 
